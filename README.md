@@ -11,6 +11,9 @@
 ### Editor
 
 ## Style Guides and Automatic Formatting
+- [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md)
+- [Bjarne Stroustrup: C++ Style and Technique FAQ](http://www.stroustrup.com/bs_faq2.html)
+- [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html)
 
 ## References and Literature
 ### Online References
