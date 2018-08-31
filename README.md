@@ -27,6 +27,8 @@ We recommend the following:
 CMake is a powerful tool for generating your build system independent of the underlying computer system.
 The official documentation describes every command in detail.
 - [CMake Reference Documentation](https://cmake.org/documentation/)
+- [Effective Modern CMake](https://gist.github.com/mbinna/c61dbb39bca0e4fb7d1f73b0d66a4fd1)
+- [Awesome CMake](https://github.com/onqtam/awesome-cmake)
 
 ### Reference Books
 For convenience, one should use some good books or e-books in addition to online sources.
@@ -42,6 +44,7 @@ The best books in our opinion are the books by 'Bjarne Stroustrup', the creator 
 - Andrei Alexandrescu, *Modern C++ Design: Generic Programming and Design Patterns Applied*
 - Jeff Langr, *Modern C++ Programming with Test-Driven Development: Code Better, Sleep Better*
 - Agner Fog, *Optimization Manuals*
+- David A. Patterson and John L. Hennessy, *Computer Organization and Design: The Hardware/Software Interface*
 
 ## External Libraries
 - [Eigen](http://eigen.tuxfamily.org/index.php?title=Main_Page): C++ template library for linear algebra: matrices, vectors, numerical solvers, and related algorithms
