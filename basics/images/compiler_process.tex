@@ -1,0 +1,52 @@
+\documentclass[tikz]{standalone}
+\usepackage{bookman}
+\usetikzlibrary{arrows.meta, shapes}
+\tikzset{
+    vertex/.style = {
+        circle,
+        fill            = black,
+        outer sep = 2pt,
+        inner sep = 1pt,
+    },
+    >=Stealth
+}
+\begin{document}
+\sffamily
+\begin{tikzpicture}
+  \node[draw] (source1) at (0,0) {source file 1};
+  \node[draw] (source2) at (0,-1) {source file 2};
+
+  \node[draw,ellipse] (preprocessor1) at (3.5,0) {preprocessor};
+  \node[draw,ellipse] (preprocessor2) at (3.5,-1) {preprocessor};
+
+  \node[draw] (presource1) at (7.5,0) {preprocessed file 1};
+  \node[draw] (presource2) at (7.5,-1) {preprocessed file 2};
+
+  \node[draw,ellipse] (compiler1) at (11,0) {compiler};
+  \node[draw,ellipse] (compiler2) at (11,-1) {compiler};
+
+  \node[draw] (object1) at (14,0) {object file 1};
+  \node[draw] (object2) at (14,-1) {object file 2};
+
+  \node[draw,ellipse] (linker) at (16.5,-0.5) {linker};
+
+  \node[draw] (executable) at (19.5,-0.5) {executable file};
+
+  \draw[->] (source1) to (preprocessor1);
+  \draw[->] (source2) to (preprocessor2);
+
+  \draw[->] (preprocessor1) to (presource1);
+  \draw[->] (preprocessor2) to (presource2);
+
+  \draw[->] (presource1) to (compiler1);
+  \draw[->] (presource2) to (compiler2);
+
+  \draw[->] (compiler1) to (object1);
+  \draw[->] (compiler2) to (object2);
+
+  \draw[->] (object1) to (linker);
+  \draw[->] (object2) to (linker);
+
+  \draw[->] (linker) to (executable);
+\end{tikzpicture}
+\end{document}
