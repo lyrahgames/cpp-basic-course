@@ -1,0 +1,8 @@
+*
+!QCustomPlot
+!*.h
+!*.cpp
+!*.cc
+!CMakeLists.txt
+!README.md
+!.gitignore
