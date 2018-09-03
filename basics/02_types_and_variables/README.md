@@ -62,30 +62,39 @@ This can be written in four different styles.
 
 ### Brace-enclosed Initializer
 The brace-enclosed initializer can be used in every context and is the most general form of an initializer.
+The following code lines are equivalent.
+The second case is a little bit more verbose and comes from the old C days.
+Hence, it is recommended to use the first initializer.
 ```cpp
-    X a {v};    // can be used in every context
+    X a {v};
+    X a = {v};
 ```
-It does not allow narrowing.
+The brace-enclosed initializer should not allow narrowing.
+At least the compiler will throw a warning message about narrowing.
 ```cpp
     float x;    // declare float variable with no initializer
-    int a {x};  // error: possible truncation
+    int a {x};  // error or warning: possible truncation
 ```
 
 ### Copy Initializer
+The copy initializers should only be used if there is a strong reason not to use the brace-enclosed initializer.
+Such reasons will be explained in the next section.
 ```cpp
     X a = v;    // use this only for simple variables with simple values
+    X a(v);     // we will use this one for constructors of some classes
 ```
-
-### Other Initializers
-Other forms are given by
+For built-in types the copy initializer performs a so-called implicit conversion.
+A variable of type `float` will automatically truncated if it is assigned to a variable of type `int`.
 ```cpp
-    X a = {v};  // 
-    X a(v);     //
+    float x {1.5};  // initialize x with value 1.5
+    int a = x;      // initialize a with 1
 ```
+The compiler will not warn about such implicit conversions.
+Hence, this initializer is error-prone.
 
-## Initialization, Automatic Type Deduction and Type Casting
-### Initialization
 ### Using `auto`
+
+
 ### Type Casting
 Explicit and implicit Type casting:
 ```cpp
