@@ -83,8 +83,8 @@ The best books in our opinion are the books by 'Bjarne Stroustrup', the creator 
 - [doctest](https://github.com/onqtam/doctest): C++ testing framework which is by far the fastest both in compile times and runtime compared to other feature-rich alternatives
 
 ## What to learn after this course?
+- Lecture *Algorithm Engineering*
 - git
-- 
 
 ## Authors
 - Markus Pawellek (markuspawellek@gmail.com)

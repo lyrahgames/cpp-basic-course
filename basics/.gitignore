@@ -4,5 +4,7 @@
 !images/*.png
 !images/*.tex
 
+!01_hello_world
+
 !README.md
 !.gitignore
