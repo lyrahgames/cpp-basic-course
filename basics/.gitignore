@@ -5,6 +5,7 @@
 !images/*.tex
 
 !01_hello_world
+!02_types_and_variables
 
 !README.md
 !.gitignore
