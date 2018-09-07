@@ -17,6 +17,8 @@ For convenience and clarity we want to use the following definitions and notatio
 - A *value* is a set of bits interpreted according to a type.
 - A *variable* is a named object.
 
+## Naming
+
 ## Built-in Types
 
 C++ offers a variety of fundamental types also called built-in types.
@@ -56,24 +58,22 @@ The following code demonstrates this.
 
 ## Initialization of Variables
 
-Let `X` be an arbitrary type, `a` be a variable of type `X` and `v` be the initial value.
-Then an initializer determines the initial value of an object.
+Let `X` be an arbitrary type and `a` be a variable of type `X`.
+Then an initializer determines the initial value `v` of `a`.
 This can be written in four different styles.
 
 ### Brace-enclosed Initializer
-The brace-enclosed initializer can be used in every context and is the most general form of an initializer.
-The following code lines are equivalent.
+The brace-enclosed initializer can be used in every context.
 The second case is a little bit more verbose and comes from the old C days.
 Hence, it is recommended to use the first initializer.
 ```cpp
-    X a {v};
-    X a = {v};
+    X a{v};
 ```
 The brace-enclosed initializer should not allow narrowing.
 At least the compiler will throw a warning message about narrowing.
 ```cpp
     float x;    // declare float variable with no initializer
-    int a {x};  // error or warning: possible truncation
+    int a{x};   // error or warning: possible truncation
 ```
 
 ### Copy Initializer
@@ -81,19 +81,69 @@ The copy initializers should only be used if there is a strong reason not to use
 Such reasons will be explained in the next section.
 ```cpp
     X a = v;    // use this only for simple variables with simple values
+    X a = {v};  //
     X a(v);     // we will use this one for constructors of some classes
 ```
 For built-in types the copy initializer performs a so-called implicit conversion.
 A variable of type `float` will automatically truncated if it is assigned to a variable of type `int`.
 ```cpp
-    float x {1.5};  // initialize x with value 1.5
+    float x{1.5};   // initialize x with value 1.5
     int a = x;      // initialize a with 1
 ```
 The compiler will not warn about such implicit conversions.
-Hence, this initializer is error-prone.
+Hence, these initializers are prone to errors when used without caution.
+
+### Literals
+To initialize a variable to a given constant value one can use so-called *literals*.
+Literals are a special case of constant values and can described directly through the source code.
+A variable of type `bool` for example can be set to two different values.
+These values can be expressed with the literals `true` and `false` (in this case they are even keywords).
+```cpp
+    bool x = true;
+    bool y = false;
+```
+#### Character Literals
+For other types the literals are changing.
+```cpp
+    char a = 'a';
+    char b = '\n';
+    char c = '\"';
+```
+#### Integer Literals
+```cpp
+    int n = 1234;
+```
+#### Floating-point Literals
+```cpp
+    float f = 1.1f;
+    float x = 1e5f;
+    double d = 1.2;
+```
 
 ### Using `auto`
-
+C++ is a strongly-typed language.
+This means that every variable has a unique and concrete type.
+Until now one had to explicitly state the type of a variable when declaring it.
+Sometimes this seems to be a little cumbersome.
+In C++ we can use the keyword `auto` to implicitly deduce the type of the variable from its initial value.
+```cpp
+    auto b = true;
+    auto c = 'x';
+    auto i = 123;
+    auto d = 1.2;
+    auto f = 1.1f;
+    auto s = sqrt(f);
+```
+In the case of the built-in types there is no big advantage using the keyword `auto`.
+But if the type of expressions becomes more and more complicated, `auto` becomes more useful.
+Assume for example measuring the time needed to run sum function `f` without the using `auto` and the system clock.
+```cpp
+    
+    std::chrono::time_point<std::chrono::system_clock> start = std::chrono::system_clock::now();
+    f();
+    std::chrono::time_point<std::chrono::system_clock> end = std::chrono::system_clock::now();
+    float duration = std::chrono::duration<float>(end - start).count();
+```
 
 ### Type Casting
 Explicit and implicit Type casting:
