@@ -3,6 +3,7 @@
 ## The Minimal C++ Program
 
 The minimal C++ program, which does nothing, but is valid, is given by the following source code.
+Please note, that C++ is a key-sensitive language and therefore makes a difference between capital and non-capital letters.
     
 ```cpp
     int main() {}

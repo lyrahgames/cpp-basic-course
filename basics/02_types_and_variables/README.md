@@ -1,6 +1,6 @@
 # Types and Variables
 
-## Declarations and Other Definitions
+## Declarations
 In C++ every name or expression has a type.
 The type determines every operation that can be performed on the expression or name.
 Let us look at an easy example of the already known type `int`.
@@ -10,17 +10,14 @@ Let us look at an easy example of the already known type `int`.
 ```
 
 This code snippet introduces a variable with the name `number` and the type `int`.
-This is also called a declaration.
+This is also called a declaration (in this case it is even a definition).
 For convenience and clarity we want to use the following definitions and notations by Bjarne Stroustrup.
 - A *declaration* is a statement in the program that introduces a name with a certain type to the program.
 - An *object* is some memory that holds a value of some type.
 - A *value* is a set of bits interpreted according to a type.
 - A *variable* is a named object.
 
-## Naming
-
 ## Built-in Types
-
 C++ offers a variety of fundamental types also called built-in types.
 Every fundamental type is a keyword of the programming language and can only be used in the context of a type.
 A few of these built-in types are given below.
@@ -55,6 +52,33 @@ The following code demonstrates this.
                 << "sizeof(double) = " << sizeof(double) << " Byte" << std::endl;
     }
 ```
+
+## Input and Output
+
+```cpp
+    #include <iostream>
+    int main(){
+        using namespace std;
+        int number;
+        cout << "Input a number: ";
+        cin >> number;
+        cout << "The given number was " << number << " !\n";
+    }
+```
+
+```cpp
+    #include <iostream>
+    #include <string>
+    int main(){
+        using namespace std;
+        cout << "Please enter your name here: ";
+        string name;
+        cin >> name;
+        cout << "Your name is " << name << "!\n";
+    }
+```
+
+## Naming
 
 ## Initialization of Variables
 
