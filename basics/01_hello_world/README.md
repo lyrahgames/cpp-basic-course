@@ -156,10 +156,3 @@ If you build and run the source code the output should look like this:
     $   g++ -o hello hello_main.cc
     $   ./hello
     Hello, World!
-
-## Do it yourself
-
-For learning good programming one has to do a lot of exercises.
-Therefore try to repeat and understand the examples given here.
-Try to change the output of the program and the name of the executable.
-Maybe find out what is happening if there is no output name defined.
