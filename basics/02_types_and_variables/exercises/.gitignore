@@ -1,9 +1,10 @@
 *
 
-!exercises
+!name_io
+!compare_names
 
-!*.cc
 !*.h
+!*.cc
 
 !README.md
 !.gitignore

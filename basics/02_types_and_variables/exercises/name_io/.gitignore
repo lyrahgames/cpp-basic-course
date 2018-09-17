@@ -1,9 +1,6 @@
 *
 
-!exercises
-
 !*.cc
-!*.h
 
 !README.md
 !.gitignore
