@@ -6,6 +6,13 @@
     cmake ..
     cmake --build .
 
+Under Windows this may change if you use 'MinGW'.
+
+    mkdir build
+    cd build
+    cmake -G "MinGW Makefiles" ..
+    cmake --build .
+
 ## Execution
     ./app
 
