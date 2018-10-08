@@ -1,12 +1,8 @@
 #ifndef GAME_GAME_H_
 #define GAME_GAME_H_
 
-#include <QApplication>
 #include <QKeyEvent>
 #include <QPaintEvent>
-#include <QPainter>
-#include <QPainterPath>
-#include <QTimer>
 #include <QWidget>
 
 class Game : public QWidget {

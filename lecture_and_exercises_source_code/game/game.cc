@@ -1,5 +1,12 @@
 #include "game.h"
 
+#include <QApplication>
+#include <QPainter>
+#include <QPainterPath>
+#include <QTimer>
+
+#include "painter_utils.h"
+
 Game::Game(QWidget* parent) : QWidget(parent) {
   setBackgroundRole(QPalette::Base);
   setAutoFillBackground(true);
@@ -38,22 +45,22 @@ void Game::keyReleaseEvent(QKeyEvent* event) {
 
 void Game::paintEvent(QPaintEvent* event) {
   QPainter painter(this);
-  QPen pen(Qt::blue, 3, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin);
-  painter.setPen(pen);
   painter.setRenderHint(QPainter::Antialiasing, true);
+  QPen pen(Qt::white, 3, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin);
+  painter.setPen(pen);
+  painter.setBrush({Qt::white, Qt::SolidPattern});
 
-  painter.setBrush(Qt::SolidPattern);
-  painter.drawRect(QRect(0, 0, width(), height()));
+  // painter.drawRect(QRect(0, 0, width(), height()));
+  painter << QRect{0, 0, width(), height()};
 
-  painter.setBrush(Qt::NoBrush);
-  QPainterPath path;
-  path.moveTo(20, 80);
-  path.lineTo(x, y);
-  path.cubicTo(80, 0, 50, 50, 80, 80);
-  painter.drawPath(path);
+  // painter.setPen({Qt::black, 3, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin});
+  // painter.setBrush(Qt::NoBrush);
 
-  QRect rect(10, 20, 80, 60);
-  painter.drawRect(rect);
+  painter << QPen{Qt::black} << QBrush{Qt::NoBrush};
+
+  Box box{{10, 20}, {100, 200}};
+
+  painter << box;
 }
 
 void Game::loop_slot() {
