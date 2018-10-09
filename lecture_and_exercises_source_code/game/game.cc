@@ -58,9 +58,7 @@ void Game::paintEvent(QPaintEvent* event) {
 
   painter << QPen{Qt::black} << QBrush{Qt::NoBrush};
 
-  Box box{{10, 20}, {100, 200}};
-
-  painter << box;
+  painter << Qt::SolidPattern << Box{{x - 10, y - 10}, {x + 10, y + 10}};
 }
 
 void Game::loop_slot() {

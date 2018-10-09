@@ -5,6 +5,8 @@
 #include <QPaintEvent>
 #include <QWidget>
 
+#include "box.h"
+
 class Game : public QWidget {
   Q_OBJECT
 
@@ -26,6 +28,7 @@ class Game : public QWidget {
   bool key_right = false;
   int x = 10;
   int y = 10;
+  Box enemy;
 };
 
 #endif  // GAME_GAME_H_
