@@ -10,22 +10,26 @@ void print_type() {
 }
 
 int main() {
-  auto a = 42;
-  auto b = &a;
-  auto& c = a;
-  const auto& d = a;
-  auto&& e = a;   // universal reference with lvalue
-  auto&& f = 42;  // universal reference with rvalue
-  auto g = d;
-  auto& h = d;
+  auto value = 42;
+  auto address = &value;
+  auto& reference = value;
+  const auto& const_reference = value;
+  auto&& universal_reference_lvalue = value;
+  auto&& universal_reference_rvalue = 42;
+  auto value_const_reference = const_reference;
+  auto& reference_const_reference = const_reference;
+  auto list = {1, 2, 3};
+  auto typed_initializer = static_cast<int>(1.5);
 
-  print_type<decltype(a)>();
-  print_type<decltype(b)>();
-  print_type<decltype(c)>();
-  print_type<decltype(d)>();
-  print_type<decltype(e)>();
-  print_type<decltype(f)>();
-  print_type<decltype(g)>();
-  print_type<decltype(h)>();
-  print_type<decltype(std::move(a))>();
+  print_type<decltype(value)>();
+  print_type<decltype(address)>();
+  print_type<decltype(reference)>();
+  print_type<decltype(const_reference)>();
+  print_type<decltype(universal_reference_lvalue)>();
+  print_type<decltype(universal_reference_rvalue)>();
+  print_type<decltype(value_const_reference)>();
+  print_type<decltype(reference_const_reference)>();
+  print_type<decltype(std::move(value))>();
+  print_type<decltype(list)>();
+  print_type<decltype(typed_initializer)>();
 }
