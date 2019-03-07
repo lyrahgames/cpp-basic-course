@@ -1,0 +1,7 @@
+!printing_deduced_types
+
+!*.cc
+!*.h
+!CMakeLists.txt
+!README.md
+!.gitignore
