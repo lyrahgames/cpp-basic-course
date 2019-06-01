@@ -1,0 +1,75 @@
+[
+
+  
+    
+    
+    {
+      "title": "Welcome",
+      "url": "/jekyll-doc-theme/docs/home/"
+
+    },
+  
+    
+    
+    {
+      "title": "Themes",
+      "url": "/jekyll-doc-theme/docs/themes/"
+
+    },
+  
+    
+    
+    {
+      "title": "Customization",
+      "url": "/jekyll-doc-theme/docs/customization/"
+
+    },
+  
+    
+    
+    {
+      "title": "Starting a simple project in C++",
+      "url": "/jekyll-doc-theme/docs/starting_simple_project/"
+
+    },
+  
+
+  
+    
+    
+    {
+      "title": "Markdown Cheatsheet",
+      "url": "/jekyll-doc-theme/docs/cheatsheet/"
+
+    },
+  
+    
+    
+    {
+      "title": "Font Awesome Icon List",
+      "url": "/jekyll-doc-theme/docs/font-awesome/"
+
+    },
+  
+    
+    
+    {
+      "title": "Bootstrap Features",
+      "url": "/jekyll-doc-theme/docs/bootstrap/"
+
+    },
+  
+
+
+  
+  {
+  "title": "Jekyll Doc Theme is published!",
+  "url": "/jekyll-doc-theme/blog/2017/05/03/jekyll-doc-theme/"
+  },
+  
+  {
+  "title": "Welcome to Jekyll!",
+  "url": "/jekyll-doc-theme/blog/2017/02/01/welcome-to-jekyll/"
+  }
+  
+]

@@ -1,0 +1,1 @@
+Sitemap: https://aksakalli.github.io/jekyll-doc-theme/jekyll-doc-theme/sitemap.xml
