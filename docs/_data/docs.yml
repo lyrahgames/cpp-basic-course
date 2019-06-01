@@ -1,0 +1,12 @@
+- title: Getting Started
+  docs:
+  - home
+  - themes
+  - customization
+  - starting_simple_project
+
+- title: Examples
+  docs:
+  - cheatsheet
+  - font-awesome
+  - bootstrap

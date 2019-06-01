@@ -1,0 +1,54 @@
+version: 2
+
+jobs:
+  build_docs:
+    docker:
+      - image: circleci/ruby:2.5
+    steps:
+      - checkout
+      - run:
+          name: Bundle install
+          command: |
+            gem install jekyll bundler
+            cd docs
+            bundle check || bundle install
+      - run:
+          name: Build docs
+          command: |
+            cd docs
+            bundle exec jekyll build
+      - persist_to_workspace:
+          root: docs
+          paths: _site
+
+  deploy_docs:
+    docker:
+      - image: node:8.10.0
+    steps:
+      - checkout
+      - attach_workspace:
+          at: docs
+      - run:
+          name: Install and configure dependencies
+          command: |
+            npm install -g --silent gh-pages@2.0.1
+            git config user.email "markuspawellek@gmail.com"
+            git config user.name "circleci"
+      - add_ssh_keys:
+          fingerprints:
+            - "36:4e:fe:67:97:e9:f5:9f:53:63:38:19:15:e2:33:be"
+      - run:
+          name: Deploy docs to gh-pages branch
+          command: gh-pages --dotfiles --message "[skip ci] Updates" --dist docs/_site
+
+workflows:
+  version: 2
+  build_and_deploy_docs:
+    jobs:
+      - build_docs
+      - deploy_docs:
+          requires:
+            - build_docs
+          filters:
+            branches:
+              only: master

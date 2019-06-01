@@ -1,0 +1,56 @@
+# Site settings
+title: C++ Basic Course
+email: markuspawellek@gmail.com
+description: >
+  A course for learning the basics about C++, its toolchain and its development environment.
+lang: en-US
+
+baseurl: "/cpp-basic-course" # the subpath of your site, e.g. /blog/
+url: https://lyrahgames.github.io # the base hostname & protocol for your site
+git_address: https://github.com/lyrahgames/cpp-basic-course
+git_edit_address: https://github.com/lyrahgames/cpp-basic-course/tree/master/docs
+
+# theme options from https://bootswatch.com/
+# comment out this to use default Bootstrap
+bootwatch: Cosmo
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+gems:
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - .idea/
+  - .gitignore
+  - README.md
+timezone: Europe/Berlin
+defaults:
+- scope:
+    path: _posts
+    type: posts
+  values:
+    layout: post
+    sectionid: blog
+
+- scope:
+    path: _docs
+    type: docs
+  values:
+    layout: docs
+    sectionid: docs
+    seo:
+      type: "WebPage"
+
+collections:
+  docs:
+    permalink: /:collection/:path/
+    output: true
+  posts:
+    permalink: /blog/:year/:month/:day/:title/
+    output: true
