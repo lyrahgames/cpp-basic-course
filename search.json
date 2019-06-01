@@ -20,4 +20,19 @@
 
 
   
+  {
+  "title": "Licensing a Repository",
+  "url": "/cpp-basic-course/blog/2019/03/11/licensing-a-repository/"
+  },
+  
+  {
+  "title": "C++ Project Structures",
+  "url": "/cpp-basic-course/blog/2019/03/11/cpp_project_structures/"
+  },
+  
+  {
+  "title": "CMake: Taming the Beast",
+  "url": "/cpp-basic-course/blog/2019/03/09/cmake_taming_the_beast/"
+  }
+  
 ]

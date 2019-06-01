@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/cpp-basic-course/css/main.css">
+    <link rel="stylesheet" href="/cpp-basic-course/css/font-awesome.min.css">
+
+    <link rel="shortcut icon" href="/cpp-basic-course/favicon.png?1">
+    <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>CMake: Taming the Beast | C++ Basic Course</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="CMake: Taming the Beast" />
+<meta name="author" content="lyrahgames" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="CMake is more or less the current standard used by nearly all C++ developers to configure, build and install their software. It is one of the major tools we have to use several times a day. Thus, mastering CMake will render your workflow to be much more efficient. However, due to the backwards compatibility and the complex language it seems to be rather difficult to write robust, efficient and modern CMakeLists.txt-files. Finding simple solutions for some problems is nearly impossible. Albeit, the documentation of CMake is complete, it does not help understanding and learning new features. But the following references will give you some nice information about modern CMake and how to use it in a real world project." />
+<meta property="og:description" content="CMake is more or less the current standard used by nearly all C++ developers to configure, build and install their software. It is one of the major tools we have to use several times a day. Thus, mastering CMake will render your workflow to be much more efficient. However, due to the backwards compatibility and the complex language it seems to be rather difficult to write robust, efficient and modern CMakeLists.txt-files. Finding simple solutions for some problems is nearly impossible. Albeit, the documentation of CMake is complete, it does not help understanding and learning new features. But the following references will give you some nice information about modern CMake and how to use it in a real world project." />
+<link rel="canonical" href="https://lyrahgames.github.io/cpp-basic-course/blog/2019/03/09/cmake_taming_the_beast/" />
+<meta property="og:url" content="https://lyrahgames.github.io/cpp-basic-course/blog/2019/03/09/cmake_taming_the_beast/" />
+<meta property="og:site_name" content="C++ Basic Course" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-03-09T00:00:00+01:00" />
+<script type="application/ld+json">
+{"mainEntityOfPage":{"@type":"WebPage","@id":"https://lyrahgames.github.io/cpp-basic-course/blog/2019/03/09/cmake_taming_the_beast/"},"description":"CMake is more or less the current standard used by nearly all C++ developers to configure, build and install their software. It is one of the major tools we have to use several times a day. Thus, mastering CMake will render your workflow to be much more efficient. However, due to the backwards compatibility and the complex language it seems to be rather difficult to write robust, efficient and modern CMakeLists.txt-files. Finding simple solutions for some problems is nearly impossible. Albeit, the documentation of CMake is complete, it does not help understanding and learning new features. But the following references will give you some nice information about modern CMake and how to use it in a real world project.","@type":"BlogPosting","url":"https://lyrahgames.github.io/cpp-basic-course/blog/2019/03/09/cmake_taming_the_beast/","headline":"CMake: Taming the Beast","dateModified":"2019-03-09T00:00:00+01:00","datePublished":"2019-03-09T00:00:00+01:00","author":{"@type":"Person","name":"lyrahgames"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link rel="canonical" href="https://lyrahgames.github.io/cpp-basic-course/blog/2019/03/09/cmake_taming_the_beast/">
+    <link rel="alternate" type="application/rss+xml" title="C++ Basic Course" href="https://lyrahgames.github.io/cpp-basic-course/feed.xml" />
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container navbar-container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+            <a class="navbar-brand" href="/cpp-basic-course/">
+                <span><img src="/cpp-basic-course/img/logonav.png" alt="Logo"></span> C++ Basic Course
+            </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li ><a href="/cpp-basic-course/docs/home/">Docs</a></li>
+                <li  class="active" ><a href="/cpp-basic-course/blog/2019/03/11/licensing-a-repository/">Blog</a></li>
+                <li >
+                    <a href="/cpp-basic-course/about/">About</a>
+                </li>
+            </ul>
+            <div class="navbar-right">
+                <form class="navbar-form navbar-left">
+                    <div class="form-group has-feedback">
+                        <input id="search-box" type="search" class="form-control" placeholder="Search...">
+                        <i class="fa fa-search form-control-feedback"></i>
+                    </div>
+                </form>
+                <ul class="nav navbar-nav">
+                    <li><a href="https://github.com/lyrahgames/cpp-basic-course"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+    <div class="page-content">
+        <div class="wrapper">
+            <div class="container">
+    <div class="row">
+
+        <div class="col-md-4">
+            <div class="well">
+                <h4>RECENT POSTS</h4>
+                <ul class="list-unstyled post-list-container">
+                    
+                    <li><a href="/cpp-basic-course/blog/2019/03/11/licensing-a-repository/" >Licensing a Repository</a></li>
+                    
+                    <li><a href="/cpp-basic-course/blog/2019/03/11/cpp_project_structures/" >C++ Project Structures</a></li>
+                    
+                    <li><a href="/cpp-basic-course/blog/2019/03/09/cmake_taming_the_beast/"  class="active" >CMake: Taming the Beast</a></li>
+                    
+                    <li><a href="/cpp-basic-course/allposts">All posts ...</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <h1>CMake: Taming the Beast</h1>
+            <p>Mar 9, 2019 • lyrahgames</p>
+            <div  id="markdown-content-container"><p>CMake is more or less the current standard used by nearly all C++ developers to configure, build and install their software. It is one of the major tools we have to use several times a day. Thus, mastering CMake will render your workflow to be much more efficient. 
+However, due to the backwards compatibility and the complex language it seems to be rather difficult to write robust, efficient and modern <code class="highlighter-rouge">CMakeLists.txt</code>-files. Finding simple solutions for some problems is nearly impossible. Albeit, the documentation of CMake is complete, it does not help understanding and learning new features.
+But the following references will give you some nice information about modern CMake and how to use it in a real world project.</p>
+
+<p>Since 2018 there is now a real e-book about how to write effective modern CMake code. I am sure you will find a way how to get it.</p>
+<ul>
+  <li><a href="https://crascit.com/professional-cmake/">Craig Scott, <em>Professional CMake: A Practical Guide</em>, 2018</a></li>
+</ul>
+
+<p>There is also a living document about learning modern CMake.</p>
+<ul>
+  <li><a href="https://cliutils.gitlab.io/modern-cmake/">An Introduction to Modern CMake</a></li>
+</ul>
+
+<p>And if you really want to see some examples for applying the new features then you should watch the following videos.</p>
+<ul>
+  <li><a href="https://www.youtube.com/watch?v=bsXLMQ6WgIk">Daniel Pfeifer, <em>Effective CMake</em>, 2017</a></li>
+  <li><a href="https://www.youtube.com/watch?v=eC9-iRN2b04">Mathieu Ropert, <em>Modern CMake for Modular Design</em>, 2017</a></li>
+  <li><a href="https://www.youtube.com/watch?v=y7ndUhdQuU8">Deniz Bahadir, <em>More Modern CMake</em>, 2018</a></li>
+</ul>
+
+<p>Hope I could show you something new. Have fun with it!</p>
+</div>
+            <hr>
+            <ul class="pager">
+                 
+                <li class="next">
+                    <a href="/cpp-basic-course/blog/2019/03/11/cpp_project_structures/">
+                      Newer <span aria-hidden="true">&rarr;</span>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+    <div class="container">
+
+        <p class="text-center">
+            C++ Basic Course
+            <i class="fa fa-copyright" aria-hidden="true"> </i>
+             2019 Markus Pawellek (markuspawellek@gmail.com)
+            |
+            Powered by <a href="https://github.com/aksakalli/jekyll-doc-theme">Jekyll Doc Theme</a>
+        </p>
+        <!-- <p class="text-muted">Place sticky footer content here.</p> -->
+    </div>
+</footer>
+
+    <script>
+  var baseurl = '/cpp-basic-course'
+</script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="/cpp-basic-course/js/bootstrap.min.js "></script>
+<script src="/cpp-basic-course/js/typeahead.bundle.min.js "></script>
+
+<script src="/cpp-basic-course/js/main.js "></script>
+
+</body>
+
+</html>
