@@ -17,7 +17,7 @@ bootwatch: Cosmo
 # Build settings
 markdown: kramdown
 highlighter: rouge
-gems:
+plugins:
   - jekyll-feed
   - jekyll-redirect-from
   - jekyll-seo-tag
@@ -47,10 +47,22 @@ defaults:
     seo:
       type: "WebPage"
 
+- scope:
+    path: _about
+    type: about
+  values:
+    layout: about
+    sectionid: about
+    seo:
+      type: "WebPage"
+
 collections:
   docs:
     permalink: /:collection/:path/
     output: true
   posts:
     permalink: /blog/:year/:month/:day/:title/
+    output: true
+  about:
+    permalink: /:collection/:path/
     output: true
