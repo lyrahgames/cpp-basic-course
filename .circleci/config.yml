@@ -3,15 +3,25 @@ version: 2
 jobs:
   build_docs:
     docker:
-      - image: circleci/ruby:2.5
+      - image: circleci/ruby:2.6
+    # environment:
+    #   BUNDLE_PATH: ~/repo/docs/vendor/bundle
     steps:
       - checkout
+      # - restore_cache:
+      #     keys:
+      #       - rubygems-v1-{{ checksum "docs/Gemfile.lock" }}
+      #       - rubygems-v1-fallback
       - run:
           name: Bundle install
           command: |
             gem install jekyll bundler
             cd docs
             bundle check || bundle install
+      # - save_cache:
+      #     key: rubygems-v1-{{ checksum "docs/Gemfile.lock" }}
+      #     paths:
+      #       - docs/vendor/bundle
       - run:
           name: Build docs
           command: |
