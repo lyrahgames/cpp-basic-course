@@ -5,7 +5,7 @@
     
     {
       "title": "Welcome",
-      "url": "/jekyll-doc-theme/docs/home/"
+      "url": "/cpp-basic-course/docs/home/"
 
     },
   
@@ -13,7 +13,7 @@
     
     {
       "title": "Themes",
-      "url": "/jekyll-doc-theme/docs/themes/"
+      "url": "/cpp-basic-course/docs/themes/"
 
     },
   
@@ -21,7 +21,7 @@
     
     {
       "title": "Customization",
-      "url": "/jekyll-doc-theme/docs/customization/"
+      "url": "/cpp-basic-course/docs/customization/"
 
     },
   
@@ -29,7 +29,7 @@
     
     {
       "title": "Starting a simple project in C++",
-      "url": "/jekyll-doc-theme/docs/starting_simple_project/"
+      "url": "/cpp-basic-course/docs/starting_simple_project/"
 
     },
   
@@ -39,7 +39,7 @@
     
     {
       "title": "Markdown Cheatsheet",
-      "url": "/jekyll-doc-theme/docs/cheatsheet/"
+      "url": "/cpp-basic-course/docs/cheatsheet/"
 
     },
   
@@ -47,7 +47,7 @@
     
     {
       "title": "Font Awesome Icon List",
-      "url": "/jekyll-doc-theme/docs/font-awesome/"
+      "url": "/cpp-basic-course/docs/font-awesome/"
 
     },
   
@@ -55,7 +55,7 @@
     
     {
       "title": "Bootstrap Features",
-      "url": "/jekyll-doc-theme/docs/bootstrap/"
+      "url": "/cpp-basic-course/docs/bootstrap/"
 
     },
   
@@ -64,12 +64,12 @@
   
   {
   "title": "Jekyll Doc Theme is published!",
-  "url": "/jekyll-doc-theme/blog/2017/05/03/jekyll-doc-theme/"
+  "url": "/cpp-basic-course/blog/2017/05/03/jekyll-doc-theme/"
   },
   
   {
   "title": "Welcome to Jekyll!",
-  "url": "/jekyll-doc-theme/blog/2017/02/01/welcome-to-jekyll/"
+  "url": "/cpp-basic-course/blog/2017/02/01/welcome-to-jekyll/"
   }
   
 ]

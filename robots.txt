@@ -1,1 +1,1 @@
-Sitemap: https://aksakalli.github.io/jekyll-doc-theme/jekyll-doc-theme/sitemap.xml
+Sitemap: https://lyrahgames.github.io/cpp-basic-course/sitemap.xml
