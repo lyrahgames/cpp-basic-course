@@ -4,24 +4,8 @@
     
     
     {
-      "title": "Welcome",
-      "url": "/cpp-basic-course/docs/home/"
-
-    },
-  
-    
-    
-    {
-      "title": "Themes",
-      "url": "/cpp-basic-course/docs/themes/"
-
-    },
-  
-    
-    
-    {
-      "title": "Customization",
-      "url": "/cpp-basic-course/docs/customization/"
+      "title": "Creating a Documentation for your Project",
+      "url": "/cpp-basic-course/docs/documenting_a_project/"
 
     },
   
@@ -34,42 +18,6 @@
     },
   
 
-  
-    
-    
-    {
-      "title": "Markdown Cheatsheet",
-      "url": "/cpp-basic-course/docs/cheatsheet/"
 
-    },
-  
-    
-    
-    {
-      "title": "Font Awesome Icon List",
-      "url": "/cpp-basic-course/docs/font-awesome/"
-
-    },
-  
-    
-    
-    {
-      "title": "Bootstrap Features",
-      "url": "/cpp-basic-course/docs/bootstrap/"
-
-    },
-  
-
-
-  
-  {
-  "title": "Jekyll Doc Theme is published!",
-  "url": "/cpp-basic-course/blog/2017/05/03/jekyll-doc-theme/"
-  },
-  
-  {
-  "title": "Welcome to Jekyll!",
-  "url": "/cpp-basic-course/blog/2017/02/01/welcome-to-jekyll/"
-  }
   
 ]

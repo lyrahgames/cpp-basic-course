@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/cpp-basic-course/css/main.css">
+    <link rel="stylesheet" href="/cpp-basic-course/css/font-awesome.min.css">
+
+    <link rel="shortcut icon" href="/cpp-basic-course/favicon.png?1">
+    <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Creating a Documentation for your Project | C++ Basic Course</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Creating a Documentation for your Project" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Developing a software project which is used by others is a rewarding task. By communicating with users, you are able to improve the code and the overall design of the project. The users on the other side are happy to see their comments implemented and will use the tool more intensive. But even if the user base consists only of a few people, it becomes tedious to explain the basic usage of your program or library every time your API has changed. Additionally, not every user wants to communicate with you directly. Hence, documenting your software is mandatory if you want people to use it. But on the other hand, creating documentation seems not to be rewarding. And therefore, one likes to ignore this part of writing code." />
+<meta property="og:description" content="Developing a software project which is used by others is a rewarding task. By communicating with users, you are able to improve the code and the overall design of the project. The users on the other side are happy to see their comments implemented and will use the tool more intensive. But even if the user base consists only of a few people, it becomes tedious to explain the basic usage of your program or library every time your API has changed. Additionally, not every user wants to communicate with you directly. Hence, documenting your software is mandatory if you want people to use it. But on the other hand, creating documentation seems not to be rewarding. And therefore, one likes to ignore this part of writing code." />
+<link rel="canonical" href="https://lyrahgames.github.io/cpp-basic-course/docs/documenting_a_project/" />
+<meta property="og:url" content="https://lyrahgames.github.io/cpp-basic-course/docs/documenting_a_project/" />
+<meta property="og:site_name" content="C++ Basic Course" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-06-01T19:08:44+02:00" />
+<script type="application/ld+json">
+{"url":"https://lyrahgames.github.io/cpp-basic-course/docs/documenting_a_project/","description":"Developing a software project which is used by others is a rewarding task. By communicating with users, you are able to improve the code and the overall design of the project. The users on the other side are happy to see their comments implemented and will use the tool more intensive. But even if the user base consists only of a few people, it becomes tedious to explain the basic usage of your program or library every time your API has changed. Additionally, not every user wants to communicate with you directly. Hence, documenting your software is mandatory if you want people to use it. But on the other hand, creating documentation seems not to be rewarding. And therefore, one likes to ignore this part of writing code.","headline":"Creating a Documentation for your Project","dateModified":"2019-06-01T19:08:44+02:00","datePublished":"2019-06-01T19:08:44+02:00","@type":"WebPage","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link rel="canonical" href="https://lyrahgames.github.io/cpp-basic-course/docs/documenting_a_project/">
+    <link rel="alternate" type="application/rss+xml" title="C++ Basic Course" href="https://lyrahgames.github.io/cpp-basic-course/feed.xml" />
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container navbar-container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+            <a class="navbar-brand" href="/cpp-basic-course/">
+                <span><img src="/cpp-basic-course/img/logonav.png" alt="Logo"></span> C++ Basic Course
+            </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li  class="active" ><a href="/cpp-basic-course/docs/home/">Docs</a></li>
+                <li ><a href="/cpp-basic-course">Blog</a></li>
+            </ul>
+            <div class="navbar-right">
+                <form class="navbar-form navbar-left">
+                    <div class="form-group has-feedback">
+                        <input id="search-box" type="search" class="form-control" placeholder="Search...">
+                        <i class="fa fa-search form-control-feedback"></i>
+                    </div>
+                </form>
+                <ul class="nav navbar-nav">
+                    <li><a href="https://github.com/lyrahgames/cpp-basic-course"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+    <div class="page-content">
+        <div class="wrapper">
+            <div class="container">
+    <div class="row">
+        <div class="col-md-4">
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-1" aria-expanded="false" aria-controls="collapse-1">
+            Getting Started
+          </a>
+        </h4>
+      </div>
+      
+      
+      <div class="panel-collapse" id="collapse-1" role="tabpanel" aria-label="Side Navigation">
+        <div class="list-group">
+          
+            
+            
+            <a class="list-group-item active" href="/cpp-basic-course/docs/documenting_a_project/">Creating a Documentation for your Project</a>
+          
+            
+            
+            <a class="list-group-item " href="/cpp-basic-course/docs/starting_simple_project/">Starting a simple project in C++</a>
+          
+        </div>
+      </div>
+    </div>
+  
+</div>
+
+        </div>
+
+        <div class="col-md-8">
+            <h1>Creating a Documentation for your Project</h1>
+            <div id="markdown-content-container"><p>Developing a software project which is used by others is a rewarding task.
+By communicating with users, you are able to improve the code and the overall design of the project.
+The users on the other side are happy to see their comments implemented and will use the tool more intensive.
+But even if the user base consists only of a few people, it becomes tedious to explain the basic usage of your program or library every time your API has changed.
+Additionally, not every user wants to communicate with you directly.
+Hence, documenting your software is mandatory if you want people to use it.
+But on the other hand, creating documentation seems not to be rewarding.
+And therefore, one likes to ignore this part of writing code.</p>
+
+<p>I am not a technical writer.
+So I will not talk about how to actually write documentation for your software, such that it is understandable by everyone.
+Instead, I would like to give you an idea about how to start with the basics and how to create a system which looks professional and is easy to handle.
+The first impression counts.
+And so, even yourself may be tempted to write more and better documentation.</p>
+
+<h2 id="basic-techniques">Basic Techniques</h2>
+<p>There are a lot of possibilities out there for documenting software.
+I am not able to cover all of them.
+But I will try to explain some basic approaches and to provide a few more elaborate techniques for handling your documentation.</p>
+
+<dl>
+  <dt>Comments</dt>
+  <dd><em>Use comments only to give other developers hints about design decisions in your implementation or interface.</em></dd>
+</dl>
+
+<p>Writing comments inside your code is a great and easy way to provide some sort of documentation where the programming language itself is not able to make the intention clear.
+But most of the times it is an overused feature.
+Blocks of comments reduce the readability of your code tremendously.
+<a href="http://www.doxygen.nl/">Doxygen</a>, for example, is a documentation tool which builds upon comments inside your code.
+Its usage is deprecated, in my opinion.
+Instead, use comments in your code to explain details about special implementation or interface parts.
+As a result, comments make it possible to give other developers hints about design decisions in your implementation or interface, but they are not suitable for documenting the usage of your software.</p>
+
+<dl>
+  <dt>README File</dt>
+  <dd><em>Always keep a README file in the root of your project up-to-date.</em></dd>
+</dl>
+
+<p>In general, you will use a code hosting platform, like GitHub or Bitbucket, to publish your git repository.
+These platforms will recognize and automatically surface a README file in the root of your project to repository visitors.
+A README file is often the first item a visitor will see.
+Additionally, you do not have to use a specific extension or format.
+You can create a README file as <code class="highlighter-rouge">README.txt</code> for a simple text-based approach, as <code class="highlighter-rouge">README.md</code> to write your text in Markdown, as <code class="highlighter-rouge">README.rst</code> to use the reST format or as other formats that are supported by your code hosting platform.
+Hence, it is a perfect starting point for the documentation of every project.
+It is fast and easy to create and gives some advanced utilities based on the format you are using.
+Nearly every developer would first try to find such a README file to learn something about your code.</p>
+
+<h2 id="advanced-techniques">Advanced Techniques</h2>
+<p>There will be a point in time when writing information into a README file will not suffice as documentation.
+Therefore, tools were developed to make things easier for developers and technical writers.
+If you need more than one file to structure your documentation, you will generally use a folder <code class="highlighter-rouge">docs</code> inside your repository where you will put all of your documentation files.
+This will reduce merge conflicts and therefore make it easier for a developer to add new documentation parts or change already existing ones.
+But for a user of the library or application, the new layer of indirection introduces overhead.
+As a developer, you should make it appealing to read the documentation.
+This is why we need tools which make it possible to display the documentation in a stylish way.</p>
+
+<p>There are two types of tools we need.
+First, we use a documentation builder that takes the documentation sources and generates the HTML webpage.
+Afterward, we will push to a hosting platform which then provides worldwide access to the generated HTML webpage.
+Unfortunately, both of them have to be compatible with each other.</p>
+
+<dl>
+  <dt>Documentation Builder</dt>
+  <dd>
+    <ul>
+      <li>
+        <dl>
+          <dt><a href="http://www.sphinx-doc.org/en/master/">Sphinx</a></dt>
+          <dd>It is an easy-to-use build system written in Python which is not only able to generate HTML webpages but also LaTeX PDF documents and other formats.
+Documentation sources can be written in reST and Markdown.</dd>
+        </dl>
+      </li>
+      <li>
+        <dl>
+          <dt><a href="https://www.mkdocs.org/">MkDocs</a></dt>
+          <dd>This is a fast and simple static site generator written in Python mainly used for building project documentation.
+Documentation source files are written in Markdown, and configured with a single YAML configuration file.</dd>
+        </dl>
+      </li>
+      <li>
+        <dl>
+          <dt><a href="https://jekyllrb.com/">Jekyll</a></dt>
+          <dd>This is a simple, extendable, static site generator written Ruby.
+You give it text written in your favorite markup language and it churns through layouts to create a static website.
+Throughout that process you can tweak how you want the site URLs to look, what data gets displayed in the layout, and more.</dd>
+        </dl>
+      </li>
+    </ul>
+  </dd>
+  <dt>Documentation Hosting Platform</dt>
+  <dd>
+    <ul>
+      <li>
+        <dl>
+          <dt><a href="https://readthedocs.org/">ReadTheDocs</a></dt>
+          <dd>They call themselves a continuous documentation platform.
+  For every commit, the documentation will be built and hosted.
+  It is even possible to deploy different versions.
+  Because of that, it is only possible to use Sphinx or MkDocs with it.</dd>
+        </dl>
+      </li>
+      <li>
+        <dl>
+          <dt><a href="https://pages.github.com/">GitHub Pages</a></dt>
+          <dd>This is a general hosting platform for static websites powered by GitHub and is therefore perfect to be integrated with your GitHub repositories.
+Nearly every static documentation builder should be compatible with it.
+But it is mainly used for Jekyll webpages.</dd>
+        </dl>
+      </li>
+    </ul>
+  </dd>
+</dl>
+
+<p>All of these tools will give you a good-looking and manageable documentation system.
+But I would like to recommend two specific workflows and to show some examples of how to implement these.</p>
+
+<dl>
+  <dt>Sphinx Documentation hosted by ReadTheDocs</dt>
+  <dd>This is by far the simplest method to start with more advanced documentation.
+You will initialize Sphinx inside your documentation folder.
+Afterward, you will directly be able to add documentation files written in Markdown and reST.
+At last, you have to register your project on the website of ReadTheDocs and it will be automatically built and hosted.</dd>
+  <dt>Jekyll Documentation hosted by GitHub Pages</dt>
+  <dd>If you need stylish and highly-customized documentation with some extra facilities, like a blog, then Jekyll is your tool of choice.
+It will take some time, but it will be worth it.</dd>
+</dl>
+
+<h2 id="other-techniques">Other Techniques</h2>
+<ul>
+  <li>GitHub Wiki</li>
+  <li>GitBooks</li>
+</ul>
+</div>
+            <div style="clear:both;">
+              <p class="text-center">
+                <br />
+                <a target="_blank" href="https://github.com/lyrahgames/cpp-basic-course/tree/master/docs/_docs/documenting_a_project.md" class="btn btn-default githubEditButton" role="button">
+                  <i class="fa fa-pencil fa-lg"></i> Improve this page
+                </a>
+              </p>
+            </div>
+            <hr>
+            
+
+
+
+
+
+  
+  
+    <ul class="pager">
+      
+        <li class="previous disabled">
+          <a>
+            <span aria-hidden="true">&larr;</span> Previous
+          </a>
+        </li>
+      
+
+      
+        
+        
+        <li class="next">
+          <a href="/cpp-basic-course/docs/starting_simple_project/">
+            Next <span aria-hidden="true">&rarr;</span>
+          </a>
+        </li>
+      
+      </ul>
+    <div class="clear"></div>
+    
+
+        </div>
+
+    </div>
+</div>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+    <div class="container">
+
+        <p class="text-center">
+            C++ Basic Course 2019 |
+            Powered by <a href="https://github.com/aksakalli/jekyll-doc-theme">Jekyll Doc Theme</a>
+        </p>
+        <!-- <p class="text-muted">Place sticky footer content here.</p> -->
+    </div>
+</footer>
+
+    <script>
+  var baseurl = '/cpp-basic-course'
+</script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="/cpp-basic-course/js/bootstrap.min.js "></script>
+<script src="/cpp-basic-course/js/typeahead.bundle.min.js "></script>
+
+<script src="/cpp-basic-course/js/main.js "></script>
+
+</body>
+
+</html>
