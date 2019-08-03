@@ -6,7 +6,7 @@ sectionid: blog
 
 {% for page in site.posts %}
 <div class="panel panel-default">
-  <p>
+  <!-- <p> -->
     <div class="panel-heading">
       <strong><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></strong>
       <span>on {{ page.date | date: "%B %e, %Y" }} {% if page.author %} by {{ page.author }}{% endif %}</span>
@@ -23,7 +23,7 @@ sectionid: blog
         </div>
       </div>
       {% endif %}
-    </p>
-  </div>
+    </div>
+  <!-- </p> -->
 </div>
 {% endfor %}
