@@ -4,47 +4,41 @@ permalink: /docs/home/
 redirect_from: /docs/index.html
 ---
 
-## Getting started
+As Bjarne Stroustrup, the creator of C++, wrote in the preface to the 4. edition of his book:
+>The use of C++ has changed dramatically over the years and so has the language.
+>From the point of view of a programmer, most of the changes have been improvements.
+>The current ISO standard C++ (..., usually called C++11) is simply a far better tool for writing quality software than were previous versions.
+>...
+>C++ is a general-purpose programming language emphasizing the design and use of type-rich, lightweight abstractions.
+>It is particularly suited for resource-constrained applications, such as those found in software infrastructures.
+>C++ rewards the programmer who take the time to master techniques for writing quality code.
+>C++ is a language for someone who takes the task of programming seriously.
 
-[GitHub Pages](https://pages.github.com) can automatically generate and serve the website for you.
-Let's say you have a username/organisation `my-org` and project `my-proj`; if you locate Jekyll source under `docs` folder of master branch in your repo `github.com/my-org/my-proj`, the website will be served on `my-org.github.io/my-proj`.
-The good thing about coupling your documentation with the source repo is, whenever you merge features with regarding content to master branch, it will also be published on the webpage instantly.
+C++ is a complex language based on many different concepts and rules.
+Its backward compatibility on the one hand and modern features, on the other hand, make it difficult to find a good starting point for writing your code.
+This becomes even worse if we think about additional tools like `CMake` or `git`.
+Such tools optimize the complete process of developing but introduce a tremendous penalty in the learning process.
+In general, inexperienced programmers are not able to add and use those tools to speed up their development workflow.
+Sometimes even the community provides bad answers for typical questions concerning their usage.
+Writing simple C++ programs cannot be done without going into the details.
+As a consequence, developing code in C++ becomes slow and inefficient.
 
-1. Just [download the source](https://github.com/aksakalli/jekyll-doc-theme/archive/gh-pages.zip) into your repo under `docs` folder.
-2. Edit site settings in  `_config.yml` file according to your project. !!! `baseurl` should be your website's relative URI like `/my-proj` !!!
-3. Replace `favicon.ico` and `img/logonav.png` with your own logo.
+But using modern language features or state-of-the-art tools to speed up your workflow is not difficult.
+It can be confusing because there are so many possibilities on how to solve a certain problem.
+We want to provide documentation which outlines parts of the language and some basic tools.
+We want to guide you through some C++ workflows.
 
-## Writing content
+## References and Literature
+### Online References
+To remember every C++ command and how to use it should be impossible.
+Therefore some references for the C++ language and their respective standard libraries is obligatory.
+Especially online references seem to be most efficient because the complete content can be accessed nearly everywhere at every time.
+We recommend the following:
+- [cppreference.com](https://en.cppreference.com/w/)
 
-### Docs
-
-Docs are [collections](https://jekyllrb.com/docs/collections/) of pages stored under `_docs` folder. To create a new page:
-
-**1.** Create a new Markdown as `_docs/my-page.md` and write [front matter](https://jekyllrb.com/docs/frontmatter/) & content such as:
-
-```
----
-title: My Page
-permalink: /docs/my-page/
----
-
-Hello World!
-```
-
-**2.** Add the pagename to `_data/docs.yml` file in order to list in docs navigation panel:
-
-```
-- title: My Group Title
-  docs:
-  - my-page
-```
-
-### Blog posts
-
-Add a new Markdown file such as `2017-05-09-my-post.md` and write the content similar to other post examples.
-
-### Pages
-
-The homepage is located under `index.html` file. You can change the content or design completely different welcome page for your taste. (You can use [bootstrap components](http://getbootstrap.com/components/))
-
-In order to add a new page, create a new `.html` or `.md` (markdown) file under root directory and link it in `_includes/topnav.html`.
+### Reference Books
+For convenience, one should use some good books or e-books in addition to online sources.
+Some of the best books in our opinion are the books by Bjarne Stroustrup, the creator of C++.
+- Bjarne Stroustrup, *Programming: Principles and Practice Using C++*
+- Bjarne Stroustrup, *The C++ Programming Language*
+- [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md)
