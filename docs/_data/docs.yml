@@ -1,4 +1,5 @@
 - title: Getting Started
   docs:
-  - documenting_a_project
+  - basic_toolchain
   - starting_simple_project
+  - documenting_a_project
