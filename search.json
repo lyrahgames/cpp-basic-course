@@ -4,8 +4,8 @@
     
     
     {
-      "title": "Creating a Documentation for your Project",
-      "url": "/cpp-basic-course/docs/documenting_a_project/"
+      "title": "Basic Toolchain",
+      "url": "/cpp-basic-course/docs/basic_toolchain/"
 
     },
   
@@ -14,6 +14,14 @@
     {
       "title": "Starting a simple project in C++",
       "url": "/cpp-basic-course/docs/starting_simple_project/"
+
+    },
+  
+    
+    
+    {
+      "title": "Creating a Documentation for your Project",
+      "url": "/cpp-basic-course/docs/documenting_a_project/"
 
     },
   

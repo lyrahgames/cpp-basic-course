@@ -15,15 +15,15 @@
 <meta name="generator" content="Jekyll v3.8.5" />
 <meta property="og:title" content="Welcome" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Getting started" />
-<meta property="og:description" content="Getting started" />
+<meta name="description" content="As Bjarne Stroustrup, the creator of C++, wrote in the preface to the 4. edition of his book: The use of C++ has changed dramatically over the years and so has the language. From the point of view of a programmer, most of the changes have been improvements. The current ISO standard C++ (…, usually called C++11) is simply a far better tool for writing quality software than were previous versions. … C++ is a general-purpose programming language emphasizing the design and use of type-rich, lightweight abstractions. It is particularly suited for resource-constrained applications, such as those found in software infrastructures. C++ rewards the programmer who take the time to master techniques for writing quality code. C++ is a language for someone who takes the task of programming seriously." />
+<meta property="og:description" content="As Bjarne Stroustrup, the creator of C++, wrote in the preface to the 4. edition of his book: The use of C++ has changed dramatically over the years and so has the language. From the point of view of a programmer, most of the changes have been improvements. The current ISO standard C++ (…, usually called C++11) is simply a far better tool for writing quality software than were previous versions. … C++ is a general-purpose programming language emphasizing the design and use of type-rich, lightweight abstractions. It is particularly suited for resource-constrained applications, such as those found in software infrastructures. C++ rewards the programmer who take the time to master techniques for writing quality code. C++ is a language for someone who takes the task of programming seriously." />
 <link rel="canonical" href="https://lyrahgames.github.io/cpp-basic-course/docs/home/" />
 <meta property="og:url" content="https://lyrahgames.github.io/cpp-basic-course/docs/home/" />
 <meta property="og:site_name" content="C++ Basic Course" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2019-08-04T13:12:07+02:00" />
+<meta property="article:published_time" content="2019-08-05T00:14:13+02:00" />
 <script type="application/ld+json">
-{"description":"Getting started","@type":"WebPage","headline":"Welcome","dateModified":"2019-08-04T13:12:07+02:00","datePublished":"2019-08-04T13:12:07+02:00","url":"https://lyrahgames.github.io/cpp-basic-course/docs/home/","@context":"http://schema.org"}</script>
+{"description":"As Bjarne Stroustrup, the creator of C++, wrote in the preface to the 4. edition of his book: The use of C++ has changed dramatically over the years and so has the language. From the point of view of a programmer, most of the changes have been improvements. The current ISO standard C++ (…, usually called C++11) is simply a far better tool for writing quality software than were previous versions. … C++ is a general-purpose programming language emphasizing the design and use of type-rich, lightweight abstractions. It is particularly suited for resource-constrained applications, such as those found in software infrastructures. C++ rewards the programmer who take the time to master techniques for writing quality code. C++ is a language for someone who takes the task of programming seriously.","@type":"WebPage","headline":"Welcome","dateModified":"2019-08-05T00:14:13+02:00","datePublished":"2019-08-05T00:14:13+02:00","url":"https://lyrahgames.github.io/cpp-basic-course/docs/home/","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -96,11 +96,15 @@
           
             
             
-            <a class="list-group-item " href="/cpp-basic-course/docs/documenting_a_project/">Creating a Documentation for your Project</a>
+            <a class="list-group-item " href="/cpp-basic-course/docs/basic_toolchain/">Basic Toolchain</a>
           
             
             
             <a class="list-group-item " href="/cpp-basic-course/docs/starting_simple_project/">Starting a simple project in C++</a>
+          
+            
+            
+            <a class="list-group-item " href="/cpp-basic-course/docs/documenting_a_project/">Creating a Documentation for your Project</a>
           
         </div>
       </div>
@@ -112,50 +116,50 @@
 
         <div class="col-md-8">
             <h1>Welcome</h1>
-            <div id="markdown-content-container"><h2 id="getting-started">Getting started</h2>
+            <div id="markdown-content-container"><p>As Bjarne Stroustrup, the creator of C++, wrote in the preface to the 4. edition of his book:</p>
+<blockquote>
+  <p>The use of C++ has changed dramatically over the years and so has the language.
+From the point of view of a programmer, most of the changes have been improvements.
+The current ISO standard C++ (…, usually called C++11) is simply a far better tool for writing quality software than were previous versions.
+…
+C++ is a general-purpose programming language emphasizing the design and use of type-rich, lightweight abstractions.
+It is particularly suited for resource-constrained applications, such as those found in software infrastructures.
+C++ rewards the programmer who take the time to master techniques for writing quality code.
+C++ is a language for someone who takes the task of programming seriously.</p>
+</blockquote>
 
-<p><a href="https://pages.github.com">GitHub Pages</a> can automatically generate and serve the website for you.
-Let’s say you have a username/organisation <code class="highlighter-rouge">my-org</code> and project <code class="highlighter-rouge">my-proj</code>; if you locate Jekyll source under <code class="highlighter-rouge">docs</code> folder of master branch in your repo <code class="highlighter-rouge">github.com/my-org/my-proj</code>, the website will be served on <code class="highlighter-rouge">my-org.github.io/my-proj</code>.
-The good thing about coupling your documentation with the source repo is, whenever you merge features with regarding content to master branch, it will also be published on the webpage instantly.</p>
+<p>C++ is a complex language based on many different concepts and rules.
+Its backward compatibility on the one hand and modern features, on the other hand, make it difficult to find a good starting point for writing your code.
+This becomes even worse if we think about additional tools like <code class="highlighter-rouge">CMake</code> or <code class="highlighter-rouge">git</code>.
+Such tools optimize the complete process of developing but introduce a tremendous penalty in the learning process.
+In general, inexperienced programmers are not able to add and use those tools to speed up their development workflow.
+Sometimes even the community provides bad answers for typical questions concerning their usage.
+Writing simple C++ programs cannot be done without going into the details.
+As a consequence, developing code in C++ becomes slow and inefficient.</p>
 
-<ol>
-  <li>Just <a href="https://github.com/aksakalli/jekyll-doc-theme/archive/gh-pages.zip">download the source</a> into your repo under <code class="highlighter-rouge">docs</code> folder.</li>
-  <li>Edit site settings in  <code class="highlighter-rouge">_config.yml</code> file according to your project. !!! <code class="highlighter-rouge">baseurl</code> should be your website’s relative URI like <code class="highlighter-rouge">/my-proj</code> !!!</li>
-  <li>Replace <code class="highlighter-rouge">favicon.ico</code> and <code class="highlighter-rouge">img/logonav.png</code> with your own logo.</li>
-</ol>
+<p>But using modern language features or state-of-the-art tools to speed up your workflow is not difficult.
+It can be confusing because there are so many possibilities on how to solve a certain problem.
+We want to provide documentation which outlines parts of the language and some basic tools.
+We want to guide you through some C++ workflows.</p>
 
-<h2 id="writing-content">Writing content</h2>
+<h2 id="references-and-literature">References and Literature</h2>
+<h3 id="online-references">Online References</h3>
+<p>To remember every C++ command and how to use it should be impossible.
+Therefore some references for the C++ language and their respective standard libraries is obligatory.
+Especially online references seem to be most efficient because the complete content can be accessed nearly everywhere at every time.
+We recommend the following:</p>
+<ul>
+  <li><a href="https://en.cppreference.com/w/">cppreference.com</a></li>
+</ul>
 
-<h3 id="docs">Docs</h3>
-
-<p>Docs are <a href="https://jekyllrb.com/docs/collections/">collections</a> of pages stored under <code class="highlighter-rouge">_docs</code> folder. To create a new page:</p>
-
-<p><strong>1.</strong> Create a new Markdown as <code class="highlighter-rouge">_docs/my-page.md</code> and write <a href="https://jekyllrb.com/docs/frontmatter/">front matter</a> &amp; content such as:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
-title: My Page
-permalink: /docs/my-page/
----
-
-Hello World!
-</code></pre></div></div>
-
-<p><strong>2.</strong> Add the pagename to <code class="highlighter-rouge">_data/docs.yml</code> file in order to list in docs navigation panel:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- title: My Group Title
-  docs:
-  - my-page
-</code></pre></div></div>
-
-<h3 id="blog-posts">Blog posts</h3>
-
-<p>Add a new Markdown file such as <code class="highlighter-rouge">2017-05-09-my-post.md</code> and write the content similar to other post examples.</p>
-
-<h3 id="pages">Pages</h3>
-
-<p>The homepage is located under <code class="highlighter-rouge">index.html</code> file. You can change the content or design completely different welcome page for your taste. (You can use <a href="http://getbootstrap.com/components/">bootstrap components</a>)</p>
-
-<p>In order to add a new page, create a new <code class="highlighter-rouge">.html</code> or <code class="highlighter-rouge">.md</code> (markdown) file under root directory and link it in <code class="highlighter-rouge">_includes/topnav.html</code>.</p>
+<h3 id="reference-books">Reference Books</h3>
+<p>For convenience, one should use some good books or e-books in addition to online sources.
+Some of the best books in our opinion are the books by Bjarne Stroustrup, the creator of C++.</p>
+<ul>
+  <li>Bjarne Stroustrup, <em>Programming: Principles and Practice Using C++</em></li>
+  <li>Bjarne Stroustrup, <em>The C++ Programming Language</em></li>
+  <li><a href="https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md">C++ Core Guidelines</a></li>
+</ul>
 </div>
             <!-- <div style="clear:both;">
               <p class="text-center">
@@ -171,6 +175,9 @@ Hello World!
 
 
 
+
+  
+  
 
   
   
