@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/cpp-basic-course/css/main.css">
+    <link rel="stylesheet" href="/cpp-basic-course/css/font-awesome.min.css">
+
+    <link rel="shortcut icon" href="/cpp-basic-course/favicon.png?1">
+    <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Forcing Newlines while using clang-format | C++ Basic Course</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Forcing Newlines while using clang-format" />
+<meta name="author" content="lyrahgames" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="clang-format is a tool which can automatically format your C++ source code. It provides different standard styles and custom configuration possibilities. Its usage lets you think more about the content of your code instead of its appearance. Most text editors provide packages to automatically run clang-format every time a specific file was changed or saved." />
+<meta property="og:description" content="clang-format is a tool which can automatically format your C++ source code. It provides different standard styles and custom configuration possibilities. Its usage lets you think more about the content of your code instead of its appearance. Most text editors provide packages to automatically run clang-format every time a specific file was changed or saved." />
+<link rel="canonical" href="https://lyrahgames.github.io/cpp-basic-course/blog/2019/08/03/clang-format-force-newlines/" />
+<meta property="og:url" content="https://lyrahgames.github.io/cpp-basic-course/blog/2019/08/03/clang-format-force-newlines/" />
+<meta property="og:site_name" content="C++ Basic Course" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-08-03T00:00:00+02:00" />
+<script type="application/ld+json">
+{"description":"clang-format is a tool which can automatically format your C++ source code. It provides different standard styles and custom configuration possibilities. Its usage lets you think more about the content of your code instead of its appearance. Most text editors provide packages to automatically run clang-format every time a specific file was changed or saved.","@type":"BlogPosting","headline":"Forcing Newlines while using clang-format","dateModified":"2019-08-03T00:00:00+02:00","datePublished":"2019-08-03T00:00:00+02:00","url":"https://lyrahgames.github.io/cpp-basic-course/blog/2019/08/03/clang-format-force-newlines/","mainEntityOfPage":{"@type":"WebPage","@id":"https://lyrahgames.github.io/cpp-basic-course/blog/2019/08/03/clang-format-force-newlines/"},"author":{"@type":"Person","name":"lyrahgames"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link rel="canonical" href="https://lyrahgames.github.io/cpp-basic-course/blog/2019/08/03/clang-format-force-newlines/">
+    <link rel="alternate" type="application/rss+xml" title="C++ Basic Course" href="https://lyrahgames.github.io/cpp-basic-course/feed.xml" />
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container navbar-container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/cpp-basic-course/">
+        <span><img src="/cpp-basic-course/img/logonav.png" alt="Logo"></span> C++ Basic Course
+      </a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li ><a href="/cpp-basic-course/docs/home/">Docs</a></li>
+        <li  class="active" ><a href="/cpp-basic-course/allposts.html">Blog</a></li>
+        <li >
+          <a href="/cpp-basic-course/about/">About</a>
+        </li>
+      </ul>
+      <div class="navbar-right">
+        <form class="navbar-form navbar-left">
+          <div class="form-group has-feedback">
+            <input id="search-box" type="search" class="form-control" placeholder="Search...">
+            <i class="fa fa-search form-control-feedback"></i>
+          </div>
+        </form>
+        <ul class="nav navbar-nav">
+          <li><a href="https://github.com/lyrahgames/cpp-basic-course"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+        </ul>
+        <ul class="nav navbar-nav">
+          <li><a href="/cpp-basic-course/feed.xml"><i class="fa fa-rss-square" aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+    <div class="page-content">
+        <div class="wrapper">
+            <div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a href="/cpp-basic-course/allposts">All Posts</a>
+            </h4>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-" aria-expanded="false" aria-controls="collapse-">
+              Recent Posts
+            </a>
+          </h4>
+        </div>
+        
+        
+        <div class="panel-collapse" id="collapse-" role="tabpanel" aria-label="Side Navigation">
+          <div class="list-group">
+            
+            <a class="list-group-item active" href="/cpp-basic-course/blog/2019/08/03/clang-format-force-newlines/">Forcing Newlines while using clang-format</a>
+            
+            <a class="list-group-item " href="/cpp-basic-course/blog/2019/03/11/licensing-a-repository/">Licensing a Repository</a>
+            
+            <a class="list-group-item " href="/cpp-basic-course/blog/2019/03/11/cpp_project_structures/">C++ Project Structures</a>
+            
+            <a class="list-group-item " href="/cpp-basic-course/blog/2019/03/09/cmake_taming_the_beast/">CMake: Taming the Beast</a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <h1>Forcing Newlines while using clang-format</h1>
+      <p>Aug 3, 2019 • lyrahgames</p>
+      <hr>
+      <div  id="markdown-content-container"><p><a href="https://clang.llvm.org/docs/ClangFormat.html"><code class="highlighter-rouge">clang-format</code></a> is a tool which can automatically format your C++ source code.
+It provides different standard styles and custom configuration possibilities.
+Its usage lets you think more about the content of your code instead of its appearance.
+Most text editors provide packages to automatically run <code class="highlighter-rouge">clang-format</code> every time a specific file was changed or saved.</p>
+
+<p>But all this automation can introduce certain kinds of artifacts.
+Take the following example:</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">array</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">},</span> <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">},</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">},</span> <span class="p">{</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">},</span> <span class="p">{</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">},</span> <span class="p">{</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">},</span> <span class="p">{</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">},</span> <span class="p">{</span><span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">}};</span>
+</code></pre></div></div>
+
+<p>Applying <code class="highlighter-rouge">clang-format</code> to this piece of code will result in the following code snippet.</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">array</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">},</span> <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">},</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">},</span> <span class="p">{</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">},</span>
+                          <span class="p">{</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">},</span> <span class="p">{</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">},</span> <span class="p">{</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">},</span> <span class="p">{</span><span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">}};</span>
+</code></pre></div></div>
+
+<p>A newline character has been added between the forth and the fifth element.
+In most cases, this generic insertion of newline characters may be good enough.
+But let us assume you would like to have a newline character right after the equality sign.
+Applying <code class="highlighter-rouge">clang-format</code> will always result in the code snippet shown above.
+Hence, we somehow have to instruct <code class="highlighter-rouge">clang-format</code> to keep and insert newlines when needed.
+One way of doing this is to disable formatting on a piece of code by using the comments <code class="highlighter-rouge">// clang-format on</code> and <code class="highlighter-rouge">// clang-format off</code>.</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// clang-format off
+</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">array</span><span class="p">[]</span> <span class="o">=</span>
+  <span class="p">{{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">},</span> <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">},</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">},</span> <span class="p">{</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">},</span> <span class="p">{</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">},</span> <span class="p">{</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">},</span> <span class="p">{</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">},</span> <span class="p">{</span><span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">}};</span>
+<span class="c1">// clang-format on
+</span></code></pre></div></div>
+
+<p>This method consists of certain drawbacks.
+First, we do not want to mention <code class="highlighter-rouge">clang-format</code> inside our code.
+Another issue is that by adding these comments, we have completely disabled the automatic formatting.
+But we only wanted to force <code class="highlighter-rouge">clang-format</code> to add one newline character.</p>
+
+<p>A much better solution is given by the following idea.
+We add an empty comment in front of newline characters we would like to keep.</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">array</span><span class="p">[]</span> <span class="o">=</span>  <span class="c1">//
+</span>    <span class="p">{{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">},</span> <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">},</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">},</span> <span class="p">{</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">},</span> <span class="p">{</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">},</span> <span class="p">{</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">},</span> <span class="p">{</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">},</span> <span class="p">{</span><span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">}};</span>
+</code></pre></div></div>
+
+<p>In this case, <code class="highlighter-rouge">clang-format</code> will not remove the newline character and therefore keep the custom formatting.
+Additionally, <code class="highlighter-rouge">clang-format</code> is not mentioned in the code and all other parts will still be formatted automatically.
+Of course, it is possible to go even further.
+For example, by inserting newline characters after every second element in the array we get the following.</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">array</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">},</span> <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">},</span>  <span class="c1">//
+</span>    <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">},</span> <span class="p">{</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">},</span>  <span class="c1">//
+</span>    <span class="p">{</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">},</span> <span class="p">{</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">},</span>  <span class="c1">//
+</span>    <span class="p">{</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">},</span> <span class="p">{</span><span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">}</span>   <span class="c1">//
+</span><span class="p">};</span>
+</code></pre></div></div>
+
+<p>Special formatting is possible as well.</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">array</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">},</span>                          <span class="c1">//
+</span>    <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">},</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">},</span> <span class="p">{</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">},</span> <span class="p">{</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">},</span>  <span class="c1">//
+</span>    <span class="p">{</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">},</span> <span class="p">{</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">},</span> <span class="p">{</span><span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">}</span>           <span class="c1">//
+</span><span class="p">};</span>
+</code></pre></div></div>
+
+<p>So next time <code class="highlighter-rouge">clang-format</code> does not format the code the way you like it, think about the insertion of empty comments to force newline characters.</p>
+</div>
+      <hr>
+      <ul class="pager">
+        
+        <li class="previous">
+          <a href="/cpp-basic-course/blog/2019/03/11/licensing-a-repository/">
+            <span aria-hidden="true">&larr;</span> Older
+          </a>
+        </li>
+         
+      </ul>
+    </div>
+  </div>
+</div>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+    <div class="container">
+        <p class="text-center">
+            C++ Basic Course
+            <i class="fa fa-copyright" aria-hidden="true"> </i>
+             2019 Markus Pawellek (markuspawellek@gmail.com)
+            |
+            Powered by <a href="https://github.com/aksakalli/jekyll-doc-theme">Jekyll Doc Theme</a>
+        </p>
+        <!-- <p class="text-muted">Place sticky footer content here.</p> -->
+    </div>
+</footer>
+
+    <script>
+  var baseurl = '/cpp-basic-course'
+</script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="/cpp-basic-course/js/bootstrap.min.js "></script>
+<script src="/cpp-basic-course/js/typeahead.bundle.min.js "></script>
+
+<script src="/cpp-basic-course/js/main.js "></script>
+
+</body>
+
+</html>

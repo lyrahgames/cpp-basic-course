@@ -21,6 +21,11 @@
 
   
   {
+  "title": "Forcing Newlines while using clang-format",
+  "url": "/cpp-basic-course/blog/2019/08/03/clang-format-force-newlines/"
+  },
+  
+  {
   "title": "Licensing a Repository",
   "url": "/cpp-basic-course/blog/2019/03/11/licensing-a-repository/"
   },
