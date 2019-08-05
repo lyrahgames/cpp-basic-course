@@ -1,0 +1,65 @@
+\documentclass{standalone}
+
+\usepackage{tikz}
+\usetikzlibrary {positioning}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{calc,shapes,fit,backgrounds}
+\definecolor{processblue}{cmyk}{1,1,1,0}
+
+\usepackage[light,sfdefault]{roboto}
+
+\newenvironment{graph}{
+  \begin{tikzpicture}
+  [
+    -latex, auto,
+    node distance =0.1\textwidth and 0.1\textwidth,
+    on grid, semithick,
+    hidden/.style = {
+      rectangle,
+      rounded corners,
+      draw=processblue!50,
+      % top color = white,
+      % bottom color = processblue!10,
+      dotted,
+      % processblue,
+      align=center,
+      thick,
+      % minimum width = 3.5cm,
+      % minimum height = 0.8cm,
+      % inner sep = 0.1cm,
+    },
+    layer/.style = {
+      rectangle,
+      rounded corners,
+      draw=processblue!50,
+      top color = white,
+      bottom color = processblue!10,
+      % dotted,
+      % processblue,
+      align=center,
+      % thick,
+      % minimum width = 3.5cm,
+      minimum height = 0.8cm,
+      % inner sep = 0.1cm,
+    },
+    >=Stealth
+  ]
+}{
+  \end{tikzpicture}
+}
+
+\begin{document}
+\begin{graph}
+  \node[layer, text width = 10cm] (OS) {Operating System / System Package Manager};
+  \node[layer, text width = 10cm] (Shell) [below = 1cm of OS] {Shell / GUI};
+  \node[layer, text width = 3cm] (VCS) [below = 1cm of Shell] {\footnotesize Version Control System};
+  \node[layer, text width = 3cm] (Compiler) [below = of Shell, left = 3.5cm of VCS] {Compiler};
+  \node[layer, text width = 3cm] (Editor) [below = of Shell, right = 3.5cm of VCS] {Text Editor};
+  \node[layer, text width = 3cm] (Build) [below = 1cm of Compiler] {Build System};
+  \node[layer, text width = 3cm] (Package) [below = 1cm of Build] {Package Manager};
+  \node[layer, text width = 3cm] (Dependency) [below = 1cm of Package] {\footnotesize Dependency Manager};
+  \node[layer, text width = 3cm] (Server) [below = 1cm of VCS] {Hosting Platform};
+
+  \node[hidden, fit=(Compiler) (Dependency), inner sep = 3pt, label={[label distance=0cm,align=center]-30:\scriptsize Language-Specific \\ \scriptsize Build Environment}] (L) {};
+\end{graph}
+\end{document}
