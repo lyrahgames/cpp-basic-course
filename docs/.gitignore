@@ -15,6 +15,9 @@
 !fonts/**
 !img
 !img/**
+!assets
+!assets/docs
+!assets/docs/figures
 
 !*.md
 !*.html

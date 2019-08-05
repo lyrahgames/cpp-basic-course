@@ -2,6 +2,9 @@
 title: Basic Toolchain
 ---
 
+[![]({{site.baseurl}}/assets/docs/figures/basic_toolchain.png)]({{site.baseurl}}/assets/docs/figures/basic_toolchain.pdf)
+
+
 ## Operating System
 **Recommendation:** Use a Linux distribution.
 
