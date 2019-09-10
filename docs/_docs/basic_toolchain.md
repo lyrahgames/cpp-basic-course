@@ -2,6 +2,21 @@
 title: Basic Toolchain
 ---
 
+## Notes on Integrated Development Environments
+Integrated Development Environments (IDEs) are software applications for computer programmers to support the process of writing and debugging code.
+They merge independent software development tools, such as source code editors, build automation tools, and debuggers, together in one bigger application.
+But there is no clear boundary if something should be called an IDE or a supporting tool.
+
+In general, the usage of an IDE will simplify installing the environment and will speed up code refactoring.
+IDEs tend to use up a huge amount of memory on the RAM.
+For a beginner, lots of things are made too simple so that learning is not really possible.
+A typical solution is a mini IDE.
+
+In the following, the basic toolchain for a C++ project will be shown.
+Every part will be discussed as an independent tool.
+This explains the interaction.
+If one should use a full-blown IDE or a mini IDE is left to the reader.
+
 [![]({{site.baseurl}}/assets/docs/figures/basic_toolchain.png)]({{site.baseurl}}/assets/docs/figures/basic_toolchain.pdf)
 
 
