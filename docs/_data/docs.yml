@@ -1,5 +1,7 @@
 - title: Getting Started
   docs:
   - basic_toolchain
+  - development_environment
+  - hello_world
   - starting_simple_project
   - documenting_a_project
