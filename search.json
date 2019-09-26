@@ -12,6 +12,22 @@
     
     
     {
+      "title": "Development Environment",
+      "url": "/cpp-basic-course/docs/development_environment/"
+
+    },
+  
+    
+    
+    {
+      "title": "Hello, World!",
+      "url": "/cpp-basic-course/docs/hello_world/"
+
+    },
+  
+    
+    
+    {
       "title": "Starting a simple project in C++",
       "url": "/cpp-basic-course/docs/starting_simple_project/"
 

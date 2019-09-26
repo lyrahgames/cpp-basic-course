@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/cpp-basic-course/css/main.css">
+    <link rel="stylesheet" href="/cpp-basic-course/css/font-awesome.min.css">
+
+    <link rel="shortcut icon" href="/cpp-basic-course/favicon.png?1">
+    <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Hello, World! | C++ Basic Course</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Hello, World!" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The Basics" />
+<meta property="og:description" content="The Basics" />
+<link rel="canonical" href="https://lyrahgames.github.io/cpp-basic-course/docs/hello_world/" />
+<meta property="og:url" content="https://lyrahgames.github.io/cpp-basic-course/docs/hello_world/" />
+<meta property="og:site_name" content="C++ Basic Course" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-09-26T21:15:57+02:00" />
+<script type="application/ld+json">
+{"description":"The Basics","@type":"WebPage","url":"https://lyrahgames.github.io/cpp-basic-course/docs/hello_world/","headline":"Hello, World!","dateModified":"2019-09-26T21:15:57+02:00","datePublished":"2019-09-26T21:15:57+02:00","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link rel="canonical" href="https://lyrahgames.github.io/cpp-basic-course/docs/hello_world/">
+    <link rel="alternate" type="application/rss+xml" title="C++ Basic Course" href="https://lyrahgames.github.io/cpp-basic-course/feed.xml" />
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container navbar-container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/cpp-basic-course/">
+        <span><img src="/cpp-basic-course/img/logonav.png" alt="Logo"></span> C++ Basic Course
+      </a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li  class="active" ><a href="/cpp-basic-course/docs/home/">Docs</a></li>
+        <li ><a href="/cpp-basic-course/allposts.html">Blog</a></li>
+        <li >
+          <a href="/cpp-basic-course/about/">About</a>
+        </li>
+      </ul>
+      <div class="navbar-right">
+        <form class="navbar-form navbar-left">
+          <div class="form-group has-feedback">
+            <input id="search-box" type="search" class="form-control" placeholder="Search...">
+            <i class="fa fa-search form-control-feedback"></i>
+          </div>
+        </form>
+        <ul class="nav navbar-nav">
+          <li><a href="https://github.com/lyrahgames/cpp-basic-course"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+        </ul>
+        <ul class="nav navbar-nav">
+          <li><a href="/cpp-basic-course/feed.xml"><i class="fa fa-rss-square" aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+    <div class="page-content">
+        <div class="wrapper">
+            <div class="container">
+    <div class="row">
+        <div class="col-md-4">
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-1" aria-expanded="false" aria-controls="collapse-1">
+            Getting Started
+          </a>
+        </h4>
+      </div>
+      
+      
+      <div class="panel-collapse" id="collapse-1" role="tabpanel" aria-label="Side Navigation">
+        <div class="list-group">
+          
+            
+            
+            <a class="list-group-item " href="/cpp-basic-course/docs/basic_toolchain/">Basic Toolchain</a>
+          
+            
+            
+            <a class="list-group-item " href="/cpp-basic-course/docs/development_environment/">Development Environment</a>
+          
+            
+            
+            <a class="list-group-item active" href="/cpp-basic-course/docs/hello_world/">Hello, World!</a>
+          
+            
+            
+            <a class="list-group-item " href="/cpp-basic-course/docs/starting_simple_project/">Starting a simple project in C++</a>
+          
+            
+            
+            <a class="list-group-item " href="/cpp-basic-course/docs/documenting_a_project/">Creating a Documentation for your Project</a>
+          
+        </div>
+      </div>
+    </div>
+  
+</div>
+
+        </div>
+
+        <div class="col-md-8">
+            <h1>Hello, World!</h1>
+            <div id="markdown-content-container"><h2 id="the-basics">The Basics</h2>
+
+<blockquote>
+  <p>C++ is a compiled language.
+For a program to run, its source text has to be processed by a compiler, producing object files, which are combined by a linker yielding an executable program.</p>
+</blockquote>
+
+<p>Especially for C and C++ there exists a so called preprocessor, which replaces strings in a source based on defined macros.</p>
+
+<blockquote>
+  <p>A C++ program typically consists of many source code files (usually simply called source files).</p>
+</blockquote>
+
+<p><a href="/cpp-basic-course/assets/docs/figures/compiler_process.pdf"><img src="/cpp-basic-course/assets/docs/figures/compiler_process.png" alt="Scheme of Compiler Process" /></a></p>
+
+<blockquote>
+  <p>An executable program is created for a specific hardware/system combination; it is not portable, say, from a Mac to a Windows PC.
+When we talk about portability of C++ programs, we usually mean portability of source code; that is, the source code can be successfully compiled and run on a variety of systems.</p>
+</blockquote>
+
+<blockquote>
+  <p>The ISO C++ standard defines two kinds of entities:</p>
+  <ul>
+    <li><em>Core Language Features</em>, such as built-in types and loops</li>
+    <li><em>Standard-library Components</em>, such as containers and I/O operations</li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <p>C++ is a statically typed language.
+That is, the type of every entity (e.g., object, value, name, and expression) must be known to the compiler at its point of use.
+The type of an object determines the set of operations applicable to it.</p>
+</blockquote>
+
+<h2 id="the-minimal-c-program">The Minimal C++ Program</h2>
+
+<p>The minimal C++ program, which does nothing, but is valid, is given by the following source code.
+Please note, that C++ is a key-sensitive language and therefore makes a difference between capital and non-capital letters.</p>
+
+<p><strong>minimal.cpp:</strong></p>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{}</span>
+</code></pre></div></div>
+
+<p>This code defines the so-called <code class="highlighter-rouge">main</code> function of the program.
+<code class="highlighter-rouge">main</code> is one of the keywords of the C++ programming language and cannot be used in another place.
+The <code class="highlighter-rouge">main</code> function defines the unique entry point for a program.
+A computer then runs the executable code starting at this entry point.</p>
+
+<p>The open and closed round Brackets <code class="highlighter-rouge">()</code> mean that the main function does not take any input arguments.
+Later, we will see that there is another possibility.</p>
+
+<p>The curly braces <code class="highlighter-rouge">{}</code> express grouping in C++ and indicate the start and end of the function body.
+The function body defines the implementation of a function and therefore contains the code that the function should execute.
+In the case of the <code class="highlighter-rouge">main</code> function the program starts by executing the first command enclosed by curly braces.</p>
+
+<p>In front of the function the respective return type is defined.
+In the case of the <code class="highlighter-rouge">main</code> function it has to be the type <code class="highlighter-rouge">int</code>.
+<code class="highlighter-rouge">int</code> is an abbreviation for integer and describes some sort of integral number.
+<code class="highlighter-rouge">int</code> is again a keyword of the language and can only be used in the context of a type.</p>
+
+<p>The value returned by <code class="highlighter-rouge">main</code> is the program’s return value to the system.
+In most cases a non-zero value indicates failure (and a zero value success).
+If there is no return value this means the program has succeeded.
+We do not have to explicitly state the program succession but we could do with the following code snippet.</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span>
+</code></pre></div></div>
+
+<p>Here <code class="highlighter-rouge">return</code> is another keyword of the C++ programming language which defines the output value of a function AND exits from this function.
+Therefore if the <code class="highlighter-rouge">return</code> directive is executed then every following command will be ignored.</p>
+
+<h2 id="producing-output-on-the-terminal">Producing Output on the Terminal</h2>
+
+<p>Typical programs should do something!
+Therefore we start with one of the most basic steps of printing ‘Hello, World!’ on the terminal.
+The following code snippet demonstrates this example.</p>
+
+<p><strong>hello.cpp:</strong></p>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="cp">#include &lt;iostream&gt;
+</span>    <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Hello, World!</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+    <span class="p">}</span>
+</code></pre></div></div>
+
+<p>The command <code class="highlighter-rouge">#include &lt;iostream&gt;</code> instructs the C++ preprocessor to include all declarations (not the implementations) of the I/O routines of the C++ standard library found in the file ‘iostream’.
+Only with these declarations the command <code class="highlighter-rouge">std::cout &lt;&lt; "Hello, World!\n";</code> makes sense.</p>
+
+<p><code class="highlighter-rouge">cout</code> is the standard object for printing information on the console.
+To use the formatted output, we write the streaming operator <code class="highlighter-rouge">&lt;&lt;</code> before the argument <code class="highlighter-rouge">"Hello, World!\n"</code>.
+The argument <code class="highlighter-rouge">"Hello, World!\n"</code> is a string literal which means that it is a sequence of characters surrounded by double quotes.
+In C++ the backslash <code class="highlighter-rouge">\</code> in a string literal is an escape character to make it possible to write special characters, like the newline character <code class="highlighter-rouge">\n</code> or the tab character <code class="highlighter-rouge">\t</code>.
+At the end of every command there has to be a semicolon <code class="highlighter-rouge">;</code>.</p>
+
+<p><code class="highlighter-rouge">std</code> is a so-called namespace which shall be explained in more detail later.
+You only have to remember that every standard facility is put in the namespace <code class="highlighter-rouge">std</code> (an abbreviation for ‘standard’).
+To use any function or class in this namespace we have three main possibilities.</p>
+<ul>
+  <li>preceding the command by <code class="highlighter-rouge">std::</code> to make the namespace explicit like it was already shown</li>
+  <li>defining a <code class="highlighter-rouge">using namespace std;</code> directive somewhere in the file to make anything available</li>
+  <li>defining a <code class="highlighter-rouge">using std::cout;</code> directive to make only <code class="highlighter-rouge">cout</code> available</li>
+</ul>
+
+<p>Both examples will be shown for convenience.</p>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="cp">#include &lt;iostream&gt;
+</span>    <span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Hello, World!</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+    <span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="cp">#include &lt;iostream&gt;
+</span>    <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">using</span> <span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="p">;</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Hello, World!</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+    <span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="writing-comments">Writing Comments</h2>
+
+<p>Using comments, which are ignored by the compiler, in the source code is usually a good way of explaining the way of working of your code to other people and your future self.
+C++ gives two kinds of comment-styles.
+The first style is started by using <code class="highlighter-rouge">//</code>.
+This indicates that until the end of the line there is a comment which should be ignored by the compiler.</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// we put a one-line comment here
+</span>    <span class="p">}</span>
+</code></pre></div></div>
+
+<p>The other style starts with <code class="highlighter-rouge">/*</code> and ends with <code class="highlighter-rouge">*/</code>.
+So this style is not ended by any newline- or other special character.</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+        <span class="cm">/*  
+            Here we can
+            write our comment
+            in more than one line!
+        */</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="cm">/*We can even create a comment inside a statement!*/</span> <span class="o">&lt;&lt;</span> <span class="s">"Hello, World</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+    <span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="building-the-examples">Building the Examples</h2>
+<p>In this folder the minimal C++ program and the program which prints ‘Hello, World!’ on the terminal, are already given as <code class="highlighter-rouge">.cc</code> files.
+This file extension is one of the many standard extensions like <code class="highlighter-rouge">.cpp</code>, <code class="highlighter-rouge">.cxx</code> and <code class="highlighter-rouge">.c++</code>.
+You are free to chose one that suits your taste and needs.</p>
+
+<p>For compiling these code examples open a terminal inside this directory and run the following command to build the example code.
+The GCC compiler for C++ is called by the command <code class="highlighter-rouge">g++</code>.
+With the option <code class="highlighter-rouge">-o &lt;target name&gt;</code> your are able to name the resulting application.
+The last argument gives GCC the source file to be compiled.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>g++ -o minimal minimal.cc
+g++ -o hello hello.cc
+</code></pre></div></div>
+
+<p>If there are no errors you should be able to see two executable files ‘minimal’ and ‘hello’ inside this directory.</p>
+
+<h2 id="execution">Execution</h2>
+<p>The resulting applications can be called by using the following commands.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./minimal
+./hello
+</code></pre></div></div>
+
+<p>The program <code class="highlighter-rouge">minimal</code> is the minimal C++ program.
+Therefore there shoud be no output.
+But there should be no error message, either.</p>
+
+<h2 id="example-usage">Example Usage</h2>
+<p>If you build and run the source code the output should look like this:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$   g++ -o hello hello_main.cc
+$   ./hello
+Hello, World!
+</code></pre></div></div>
+</div>
+            <!-- <div style="clear:both;">
+              <p class="text-center">
+                <br />
+                <a target="_blank" href="https://github.com/lyrahgames/cpp-basic-course/tree/master/docs/_docs/hello_world.md" class="btn btn-default githubEditButton" role="button">
+                  <i class="fa fa-pencil fa-lg"></i> Improve this page
+                </a>
+              </p>
+            </div> -->
+            <hr>
+            
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+    <ul class="pager">
+      
+        
+        
+        <li class="previous">
+          <a href="/cpp-basic-course/docs/development_environment/">
+            <span aria-hidden="true">&larr;</span> Previous
+          </a>
+        </li>
+      
+
+      
+        
+        
+        <li class="next">
+          <a href="/cpp-basic-course/docs/starting_simple_project/">
+            Next <span aria-hidden="true">&rarr;</span>
+          </a>
+        </li>
+      
+      </ul>
+    <div class="clear"></div>
+    
+
+        </div>
+
+    </div>
+</div>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+    <div class="container">
+        <p class="text-center">
+            C++ Basic Course
+            <i class="fa fa-copyright" aria-hidden="true"> </i>
+             2019 Markus Pawellek (markuspawellek@gmail.com)
+            |
+            Powered by <a href="https://github.com/aksakalli/jekyll-doc-theme">Jekyll Doc Theme</a>
+        </p>
+        <!-- <p class="text-muted">Place sticky footer content here.</p> -->
+    </div>
+</footer>
+
+    <script>
+  var baseurl = '/cpp-basic-course'
+</script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="/cpp-basic-course/js/bootstrap.min.js "></script>
+<script src="/cpp-basic-course/js/typeahead.bundle.min.js "></script>
+
+<script src="/cpp-basic-course/js/main.js "></script>
+
+</body>
+
+</html>
